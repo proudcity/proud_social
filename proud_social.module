@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the Helm Social feature.
+ * Code for the Proud Social feature.
  */
 
 include_once 'proud_social.features.inc';

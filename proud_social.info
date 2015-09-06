@@ -1,7 +1,7 @@
-name = Helm Social
+name = Proud Social
 description = Adds basic social network links and feeds
 core = 7.x
-package = Helm
+package = Proud
 dependencies[] = ctools
 dependencies[] = defaultconfig
 dependencies[] = features

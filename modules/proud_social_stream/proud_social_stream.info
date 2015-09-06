@@ -1,7 +1,7 @@
-name = Helm Social Stream
-description = Integrates Helm Social with jQuery Social Stream
+name = Proud Social Stream
+description = Integrates Proud Social with jQuery Social Stream
 core = 7.x
-package = Helm
+package = Proud
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = helm_page
