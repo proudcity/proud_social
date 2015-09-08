@@ -7,6 +7,16 @@
 include_once 'proud_social.features.inc';
 
 
+/**
+ * Implements hook_proud_post_install().
+ * These permissions need to be set after the feature has installed.
+ */
+function proud_social_proud_post_install() {
+  module_load_include('install', 'proud_social', 'proud_social');
+  proud_social_post_install();
+}
+
+
 /** 
  * Implementation of hook_entity_info_alter().
  */
