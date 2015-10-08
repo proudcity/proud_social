@@ -28,8 +28,7 @@
     "grunt-sass": "~0.14.2",
     "grunt-usemin": "~2.4.0",
     "grunt-wiredep": "~1.9.0",
-    "load-grunt-tasks": "~0.6.0",
-    "node-sass": "~0.9.6"
+    "load-grunt-tasks": "~0.6.0"
   },
   "dependencies": {
     "imagemin": "^3.2.0"
