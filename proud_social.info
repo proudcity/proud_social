@@ -7,7 +7,9 @@ dependencies[] = features
 dependencies[] = fieldable_panels_panes
 dependencies[] = socialfield
 dependencies[] = socialfield_widgets
-dependencies[] = social_stream
+dependencies[] = proud_social_app
+; @todo enable
+; dependencies[] = social_stream
 features[ctools][] = fieldable_panels_panes:fieldable_panels_pane_type:1
 features[features_api][] = api:2
 features[field_base][] = field_social_networks
