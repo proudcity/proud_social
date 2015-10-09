@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en" ng-app="socialApp">
+<html class="no-js" lang="en" ng-app="socialAppParent">
   <head>
     <meta charset="utf-8">
     <base href="/" />
@@ -26,21 +26,12 @@
     </script>
   </head>
   <body>
-    <script type="text/javascript">
-        Drupal = {
-          'settings' : {
-              'proud_social_app': {
-
-              }
-          }
-        };
-    </script>
     
     <div social-timeline social-post-count="5" social-hide-controls="true"></div>
     <script src="bower_components/jquery/dist/jquery.js"></script>
         
     <script src="js/bootstrap.min.js"></script>
     <script src="js/libraries.min.js"></script>
-     <script src="js/app.min.js"></script>
+    <script src="js/app.min.js"></script>
   </body>
 </html>

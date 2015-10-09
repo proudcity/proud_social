@@ -1,7 +1,22 @@
 'use strict';
 
-angular.module('socialApp.social', [
+angular.module('socialApp', [
+  'iso.directives',
+  'ngResource',
+  'ngSanitize'
 ])
+
+.run(
+  [          '$rootScope', '$window', 
+    function ($rootScope,   $window) {
+
+      var drupal = typeof Drupal !== 'undefined' ? Drupal : {}; 
+
+      // It's very handy to add references to $state and $stateParams to the $rootScope
+      $rootScope.socialApi = _.get(drupal, 'settings.social_wall.socialApi') || 'http://45.55.8.62:8080/api/';
+    }
+  ]
+)
 
 // See https://www.wikipedia.com/services/api/wikipedia.photos.search.html
 // Photo url documentation: https://www.wikipedia.com/services/api/misc.urls.html
@@ -169,7 +184,7 @@ angular.module('socialApp.social', [
   return {
     restrict: 'A',
     controller: "SocialController",
-    templateUrl: 'views/social/social.html',
+    templateUrl: 'views/apps/socialApp/social.html',
     link: function($scope, $element, $attributes) {
       // Init vars
       $scope.socialPostCount = $scope.socialPostCount || 20;
@@ -218,7 +233,7 @@ angular.module('socialApp.social', [
   return {
     restrict: 'A',
     controller: "SocialController",
-    templateUrl: 'views/social/social-timeline.html',
+    templateUrl: 'views/apps/socialApp/social-timeline.html',
     compile: function(tElem, tAttrs) {
       return {
         pre: function($scope, $element, $attributes) {

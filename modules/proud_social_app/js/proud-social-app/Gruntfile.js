@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 				includePaths: [
 				  '<%= app %>/bower_components/bootstrap-sass-official/assets/stylesheets',
           '<%= app %>/bower_components/bourbon/dist',
-          '<%= app %>/bower_components/proudcity-patterns/app/scss'
+          '<%= app %>/bower_components/proudcity-patterns/app'
 				]
 			},
 			dist: {
@@ -78,6 +78,19 @@ module.exports = function(grunt) {
 		//		}]
 		//	}
 		//},
+
+		concat: {
+			wrap: {
+				src: [
+		      '.tmp/concat/js/app.min.js'
+	     	],
+	     	dest: '.tmp/concat/js/app.min.js',
+   	    options: {
+      		banner: "!function($){",
+		      footer: "}(jQuery);"
+	    	}
+			}
+		},
 
 		uglify: {
 			options: {
@@ -153,7 +166,7 @@ module.exports = function(grunt) {
 		},
 
 		ngtemplates:  {
-		  "socialApp":        {
+		  "socialAppParent":        {
 		    cwd:      '<%= dist %>',
 		    src:      'views/**/*.html',
 		    dest:     '<%= dist %>/views/app.templates.js',
@@ -186,6 +199,6 @@ module.exports = function(grunt) {
 	//grunt.registerTask('validate-js', ['jshint', 'ngtemplates', 'concat']);
 	grunt.registerTask('server-dist', ['connect:dist']);
 	
-	grunt.registerTask('publish', ['compile-sass', 'clean:dist', 'useminPrepare', 'copy:dist',  'concat', 'cssmin', 'ngtemplates','uglify', 'usemin']);
+	grunt.registerTask('publish', ['compile-sass', 'clean:dist', 'useminPrepare', 'copy:dist',  'concat:generated', 'concat:wrap', 'cssmin', 'ngtemplates','uglify', 'usemin']);
 //'newer:imagemin',
 };
