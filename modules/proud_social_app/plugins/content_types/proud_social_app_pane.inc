@@ -2,7 +2,7 @@
 
 $plugin = array(
   'single' => TRUE,
-  'title' => t('Social Feed'),
+  'title' => t('Social feed'),
   'description' => t('Dynamic social media feed'),
   'category' => t('Blocks'),
   'edit form' => 'proud_social_app_pane_edit_form',
