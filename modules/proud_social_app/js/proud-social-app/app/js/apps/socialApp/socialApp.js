@@ -97,7 +97,10 @@ angular.module('socialApp', [
   var userFeed = SocialFeed.getUser(citySocial);
 
   // Toggle social source
-  $scope.switchService = function(service, limit, callback) {
+  $scope.switchService = function(service, event, limit, callback) {
+    if(event) {
+      event.preventDefault();
+    }
     var isActive = $scope.isServiceActive(service),
         runQuery = false,
         callback = callback || function() {};
@@ -193,7 +196,7 @@ angular.module('socialApp', [
 
       // call init
       if(!$scope.inited) {
-        $scope.switchService(null, $scope.socialPostCount);
+        $scope.switchService(null, null, $scope.socialPostCount);
       }
 
       // Grab container jquery ref
@@ -246,14 +249,14 @@ angular.module('socialApp', [
           $scope.oddEvenSwitch = 0;
           $scope.timelineSwitchService = function(service) {
             
-            $scope.switchService(service, $scope.socialPostCount, function() {
+            $scope.switchService(service, null, $scope.socialPostCount, function() {
               $scope.oddEvenSwitch = $scope.oddEvenSwitch ? 0 : 1;
             });
           }
 
           // call init
           if(!$scope.inited) {
-            $scope.switchService(null, $scope.socialPostCount);
+            $scope.switchService(null, null, $scope.socialPostCount);
           }
         }
       }
