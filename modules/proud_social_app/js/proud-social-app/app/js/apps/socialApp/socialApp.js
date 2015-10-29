@@ -217,8 +217,8 @@ angular.module('socialApp', [
           }
           if($scope.social) {
             $timeout(function() {
-              var imgLoad = imagesLoaded($element);
-              imgLoad.on('always', function( instance ) {
+              var imgLoad = $element.waitForImages();
+              imgLoad.done(function() {
                 
                 //$scope.$emit('iso-option', {sortBy : 'date'});
                 $scope.container.isotope({sortBy : 'date', sortAscending: false});

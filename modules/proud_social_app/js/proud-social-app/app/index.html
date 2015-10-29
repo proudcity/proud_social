@@ -33,30 +33,29 @@
     </script>
   </head>
   <body>
-    <div ng-controller="ParentCntrl">
+    <div>
         <div in-view="socialCompile = socialCompile || '%3Cdiv%20social-wall%20social-post-count%3D%2220%22%20social-hide-controls%3D%22true%22%3E%3C%2Fdiv%3E'"
        lazy-compile="socialCompile" lazy-decode="true"></div>
     </div>
-    <script src="bower_components/jquery/dist/jquery.js"></script>
         
     <!-- build:js js/bootstrap.min.js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/lodash/lodash.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/waitForImages/src/jquery.waitforimages.js"></script>
     <!-- endbuild -->
     <!-- build:js js/angular-lazy.min.js -->
     <script src="bower_components/angular-inview/angular-inview.js"></script>
-    <script src="bower_components/angular-lazycompile/src/angular-lazycompile.js"></script>
+    <script src="bower_components/angular-lazycompile/dist/angular-lazycompile.min.js"></script>
     <!-- endbuild -->
     <!-- build:js js/libraries.min.js -->
     <!-- bower:js -->
     <script src="bower_components/isotope/jquery.isotope.min.js"></script>
+    <script src="bower_components/angular-lazycompile/src/angular-lazycompile.js"></script>
     <script src="bower_components/angular-isotope/dist/angular-isotope.js"></script>
-    <script src="bower_components/eventEmitter/EventEmitter.js"></script>
-    <script src="bower_components/eventie/eventie.js"></script>
-    <script src="bower_components/imagesloaded/imagesloaded.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->
