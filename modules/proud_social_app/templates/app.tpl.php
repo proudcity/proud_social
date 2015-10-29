@@ -1,5 +1,4 @@
 <div id="social-app">
-  <div social-<?php print $conf['widget_type']; ?> 
-       social-post-count="<?php print $conf['post_count']; ?>" 
-       social-hide-controls="<?php print $conf['show_controls']; ?>"></div>
+  <div in-view="socialCompile = socialCompile || '<?php print $lazy_html; ?>'"
+       lazy-compile="socialCompile" lazy-decode="true"></div>
 </div>

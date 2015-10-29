@@ -100,5 +100,11 @@ function template_preprocess_proud_social_app(&$variables) {
     'post_count' => $conf['post_count'],
     'show_controls' => $conf['show_controls']
   );
+  // Compile html into a url encoded string
+  $variables['lazy_html'] = rawurlencode(
+    '<div social-' . $conf['widget_type'] 
+    . ' social-post-count="' . $conf['post_count'] 
+    . '" social-hide-controls="' . $conf['show_controls'] . '"></div>'
+  );
   drupal_add_js(array('proud_social_app' => $settings), 'setting');
 }
