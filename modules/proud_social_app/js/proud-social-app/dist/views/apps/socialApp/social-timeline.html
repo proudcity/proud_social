@@ -1,11 +1,11 @@
-<h2 ng-if="!socialShowControls">Around me</h2>
-<div ng-if="!socialShowControls">
+<h2 ng-if="socialHideControls">Around me</h2>
+<div ng-if="socialHideControls">
   <ul class="nav nav-pills">
     <li class="social-filter-{{service}}" ng-class="{active: isServiceActive('all')}">
-      <a class="text-gray" ng-click="timelineSwitchService('all')" href="#"><i class="fa fa-th"></i></a>
+      <a class="text-gray" ng-click="timelineSwitchService('all', $event)" href="#"><i class="fa fa-th"></i></a>
     </li>
     <li ng-repeat="(service, title) in services" ng-show="showServiceTab(service)" class="social-filter-{{service}}" ng-class="{active: isServiceActive(service)}">
-      <a class="text-gray" ng-click="timelineSwitchService(service)" href="#"><i class="fa fa-{{service}}"></i></a>
+      <a class="text-gray" ng-click="timelineSwitchService(service, $event)" href="#"><i class="fa fa-{{service}}"></i></a>
     </li>
   </ul>
 </div>

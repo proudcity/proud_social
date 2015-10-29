@@ -26,11 +26,14 @@
     </script>
   </head>
   <body>
-    
-    <div social-timeline social-post-count="5" social-hide-controls="true"></div>
+    <div ng-controller="ParentCntrl">
+        <div in-view="socialCompile = socialCompile || '%3Cdiv%20social-wall%20social-post-count%3D%2220%22%20social-hide-controls%3D%22true%22%3E%3C%2Fdiv%3E'"
+       lazy-compile="socialCompile" lazy-decode="true"></div>
+    </div>
     <script src="bower_components/jquery/dist/jquery.js"></script>
         
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular-lazy.min.js"></script>
     <script src="js/libraries.min.js"></script>
     <script src="js/app.min.js"></script>
   </body>
