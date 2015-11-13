@@ -10,7 +10,8 @@
     "angular-isotope": "git@github.com:aschmoe/angular-isotope.git#cb0da03db9879c933138fe59026657ce56624f45",
     "proudcity-patterns": "proudcity/proudcity-patterns#master",
     "lodash": "~3.10.1",
-    "waitForImages": "~2.1.0"
+    "waitForImages": "~2.1.0",
+    "angular-readmore": "git@github.com:aschmoe/angular-readmore.git#master"
   },
   "resolutions": {
     "angular": "1.3.18",
