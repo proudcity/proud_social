@@ -23,7 +23,15 @@
         </a>
         <div class="card-block">
           <h4 ng-if="item.title" class="card-title">{{item.title}}</h4>
-          <p class="card-text" ng-bind-html="toSafe(item.text, item.service)"></p>
+          <p class="card-text" 
+             read-more 
+             more-callback="reFlow()"
+             less-callback="reFlow()"
+             content="{{item.body}}" 
+             words 
+             limit="40" 
+             less-text="Less" ></p>
+          </p>
           <a class="pull-right text-gray" ng-href="{{getPostUrl(item)}}" target="_blank"><i class="fa fa-{{item.service}}"></i></a>
           <div ng-if="item.date" class="social-date text-gray" date="{{item.date}}">{{item.date|date}}</div>
         </div>
