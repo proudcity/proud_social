@@ -38,6 +38,9 @@ function proud_social_app_library() {
       $path . 'js/app.min.js' => $js_settings,
       $path . 'views/app.templates.js' => $js_settings,
       drupal_get_path('module', 'proud_social_app') . '/js/proud-social-app.js' => $js_settings,
+    ),
+    'css' => array(
+      $path . 'css/app.min.css'
     )
   );
   return $libraries;
