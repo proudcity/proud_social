@@ -163,7 +163,9 @@ angular.module('socialApp', [
   }
 
   $scope.reFlow = function() {
-    $scope.$emit('iso-method', {name:'reLayout', params:null});
+    setTimeout(function() {
+      $scope.$emit('iso-method', {name:'reLayout', params:null});
+    }, 0);
   }
 
   $scope.shuffle = function() {

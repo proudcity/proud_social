@@ -18,7 +18,7 @@
       </a>
       <div class="card-block">
         <h6 ng-if="item.title" class="card-title" ng-bind-html="toSafe(item.title)"></h6>
-        <p class="card-text" read-more content="{{item.body}}" words limit="40" less-text="Less"></p>
+        <p class="card-text" read-more content="{{item.body}}" words limit="20" less-text="Less"></p>
         <div ng-if="item.date" class="social-date text-gray" date="{{item.date}}">{{item.date|date}}</div>
       </div>
     </div>
